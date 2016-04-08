@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>PaylevenPaymentDelegate Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">PaylevenAppApi 1.2 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Payleven Holding GmbH</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/paylevenPaymentCanceled:">- paylevenPaymentCanceled:</option>
+		
+		<option value="//api/name/paylevenPaymentDeclined:">- paylevenPaymentDeclined:</option>
+		
+		<option value="//api/name/paylevenPaymentDidFailWithError:parameters:">- paylevenPaymentDidFailWithError:parameters:</option>
+		
+		<option value="//api/name/paylevenPaymentFinished:">- paylevenPaymentFinished:</option>
+		
+		<option value="//api/name/paylevenRefundCanceled:">- paylevenRefundCanceled:</option>
+		
+		<option value="//api/name/paylevenRefundDidFailWithError:parameters:">- paylevenRefundDidFailWithError:parameters:</option>
+		
+		<option value="//api/name/paylevenRefundFinished:">- paylevenRefundFinished:</option>
+		
+		<option value="//api/name/paylevenSalesHistoryCanceled:">- paylevenSalesHistoryCanceled:</option>
+		
+		<option value="//api/name/paylevenTransactionDetailsCanceled:">- paylevenTransactionDetailsCanceled:</option>
+		
+		<option value="//api/name/paylevenTransactionDetailsFailWithError:parameters:">- paylevenTransactionDetailsFailWithError:parameters:</option>
+		
+		<option value="//api/name/paylevenTransactionNotFound:">- paylevenTransactionNotFound:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">PaylevenPaymentDelegate Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>PaylevenAppApi.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Handle payment results</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/paylevenPaymentDidFailWithError:parameters:" title="paylevenPaymentDidFailWithError:parameters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/paylevenPaymentDidFailWithError:parameters:">&ndash;&nbsp;paylevenPaymentDidFailWithError:parameters:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>triggered on failed payments</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)paylevenPaymentDidFailWithError:(NSError *)<em>error</em> parameters:(NSDictionary *)<em>parameters</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>Contains more information about the error see <a href="../Constants/PaylevenAppApiErrorCode.html"><code>PaylevenAppApiErrorCode</code></a> for details on the different errorcodes</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameters</code></th>
+						<td><p>A dictionary of return values with information about the payment</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/paylevenPaymentFinished:" title="paylevenPaymentFinished:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/paylevenPaymentFinished:">&ndash;&nbsp;paylevenPaymentFinished:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>triggered on succesful finished payment</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)paylevenPaymentFinished:(NSDictionary *)<em>parameters</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameters</code></th>
+						<td><p>A dictionary of return values with information about the payment</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/paylevenPaymentCanceled:" title="paylevenPaymentCanceled:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/paylevenPaymentCanceled:">&ndash;&nbsp;paylevenPaymentCanceled:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>triggered on succesful canceled payment</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)paylevenPaymentCanceled:(NSDictionary *)<em>parameters</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameters</code></th>
+						<td><p>A dictionary of return values with information about the payment</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/paylevenPaymentDeclined:" title="paylevenPaymentDeclined:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/paylevenPaymentDeclined:">&ndash;&nbsp;paylevenPaymentDeclined:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>triggered on declined/refused payment</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)paylevenPaymentDeclined:(NSDictionary *)<em>parameters</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameters</code></th>
+						<td><p>A dictionary of return values with information about the payment</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/paylevenRefundFinished:" title="paylevenRefundFinished:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/paylevenRefundFinished:">&ndash;&nbsp;paylevenRefundFinished:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>triggered on succesful refund</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)paylevenRefundFinished:(NSDictionary *)<em>parameters</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameters</code></th>
+						<td><p>A dictionary of return values with information about the payment</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/paylevenTransactionNotFound:" title="paylevenTransactionNotFound:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/paylevenTransactionNotFound:">&ndash;&nbsp;paylevenTransactionNotFound:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>triggered on transaction not found</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)paylevenTransactionNotFound:(NSString *)<em>orderId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>orderId</code></th>
+						<td><p>The order ID you specified while creating the payment</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/paylevenRefundCanceled:" title="paylevenRefundCanceled:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/paylevenRefundCanceled:">&ndash;&nbsp;paylevenRefundCanceled:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>triggered on succesful canceled refund</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)paylevenRefundCanceled:(NSString *)<em>orderId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>orderId</code></th>
+						<td><p>The order ID you specified while creating the payment</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/paylevenTransactionDetailsCanceled:" title="paylevenTransactionDetailsCanceled:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/paylevenTransactionDetailsCanceled:">&ndash;&nbsp;paylevenTransactionDetailsCanceled:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>triggered on succesful canceled refund</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)paylevenTransactionDetailsCanceled:(NSString *)<em>orderId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>orderId</code></th>
+						<td><p>The order ID you specified while creating the payment</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/paylevenRefundDidFailWithError:parameters:" title="paylevenRefundDidFailWithError:parameters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/paylevenRefundDidFailWithError:parameters:">&ndash;&nbsp;paylevenRefundDidFailWithError:parameters:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>triggered on failed refunds</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)paylevenRefundDidFailWithError:(NSError *)<em>error</em> parameters:(NSDictionary *)<em>parameters</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>Contains more information about the error see <a href="../Constants/PaylevenAppApiErrorCode.html"><code>PaylevenAppApiErrorCode</code></a> for details on the different errorcodes</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameters</code></th>
+						<td><p>A dictionary of return values with information about the payment</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/paylevenTransactionDetailsFailWithError:parameters:" title="paylevenTransactionDetailsFailWithError:parameters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/paylevenTransactionDetailsFailWithError:parameters:">&ndash;&nbsp;paylevenTransactionDetailsFailWithError:parameters:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>triggered on failed transaction details</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)paylevenTransactionDetailsFailWithError:(NSError *)<em>error</em> parameters:(NSDictionary *)<em>parameters</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>Contains more information about the error see <a href="../Constants/PaylevenAppApiErrorCode.html">PaylevenAppApiErrorCode</a> for details on the different errorcodes</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameters</code></th>
+						<td><p>A dictionary of return values with information about the payment</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/paylevenSalesHistoryCanceled:" title="paylevenSalesHistoryCanceled:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/paylevenSalesHistoryCanceled:">&ndash;&nbsp;paylevenSalesHistoryCanceled:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>triggered on succesful canceled sales history</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)paylevenSalesHistoryCanceled:(NSString *)<em>orderId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>orderId</code></th>
+						<td><p>The orderid you specified while creating the payment</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 Payleven Holding GmbH. All rights reserved. Updated: 2015-02-12</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

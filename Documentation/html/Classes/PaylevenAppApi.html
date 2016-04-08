@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>PaylevenAppApi Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">PaylevenAppApi 1.2 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Payleven Holding GmbH</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/isConfigured">isConfigured</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/sharedInstance">+ sharedInstance</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/configure:callbackUrlScheme:">- configure:callbackUrlScheme:</option>
+		
+		<option value="//api/name/handleOpenUrl:bundleId:">- handleOpenUrl:bundleId:</option>
+		
+		<option value="//api/name/isPaylevenAvailable">- isPaylevenAvailable</option>
+		
+		<option value="//api/name/isPaymentPending">- isPaymentPending</option>
+		
+		<option value="//api/name/openTransactionDetails:orderId:">- openTransactionDetails:orderId:</option>
+		
+		<option value="//api/name/openTransactionDetailsForRefund:orderId:">- openTransactionDetailsForRefund:orderId:</option>
+		
+		<option value="//api/name/openTransactionHistory:">- openTransactionHistory:</option>
+		
+		<option value="//api/name/payWithPayleven:amount:currency:orderId:description:image:printerIp:">- payWithPayleven:amount:currency:orderId:description:image:printerIp:</option>
+		
+		<option value="//api/name/reset">- reset</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">PaylevenAppApi Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>PaylevenAppApi.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The PaylevenAppApi allows app developers to open the payleven app from within their own apps and to do payments with it.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/sharedInstance" title="sharedInstance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedInstance">+&nbsp;sharedInstance</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Singleton access method.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (PaylevenAppApi *)sharedInstance</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/configure:callbackUrlScheme:" title="configure:callbackUrlScheme:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/configure:callbackUrlScheme:">&ndash;&nbsp;configure:callbackUrlScheme:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initial api setup has to be called before doing any other calls to the API.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)configure:(NSString *)<em>apiKey</em> callbackUrlScheme:(NSString *)<em>callbackUrlScheme</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>apiKey</code></th>
+						<td><p>The apikey you received from payleven</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>callbackUrlScheme</code></th>
+						<td><p>The custom url scheme you registered for your app and which the payleven app should use to open your app on payment results</p>
+
+<p>for more information about creating a custom url scheme for your app see
+the <strong>Implementing Custom URL Schemes</strong> section in the <a href="http://developer.apple.com/library/ios/#documentation/iphone/conceptual/iphoneosprogrammingguide/AdvancedAppTricks/AdvancedAppTricks.html">Apple Documentation</a> .</p>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>(BOOL)application:(UIApplication <em>)application didFinishLaunchingWithOptions:(NSDictionary </em>)launchOptions
+{
+[[PaylevenAppApi sharedInstance] configure:@&ldquo;yourapikey&rdquo; callbackUrlScheme:@&ldquo;yoururlscheme&rdquo;];
+return YES;
+}</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/handleOpenUrl:bundleId:" title="handleOpenUrl:bundleId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/handleOpenUrl:bundleId:">&ndash;&nbsp;handleOpenUrl:bundleId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Handle the return calls from the payleven app to your app.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)handleOpenUrl:(NSURL *)<em>url</em> bundleId:(NSString *)<em>bundleId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>url</code></th>
+						<td><p>The url the payleven app used to open the client app.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>bundleId</code></th>
+						<td><p>Caller app bundle id.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES If the given url and bundle id have been handled.</p><p>NO In case of an error.</p>
+
+<p>Has to be called from yor AppDelegate openURL method</p>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+<li>(BOOL)application:(UIApplication <em>)application openURL:(NSURL </em>)url
+sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+[[PaylevenAppApi sharedInstance] handleOpenUrl:url bundleId:sourceApplication];
+return YES;
+}</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/payWithPayleven:amount:currency:orderId:description:image:printerIp:" title="payWithPayleven:amount:currency:orderId:description:image:printerIp:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/payWithPayleven:amount:currency:orderId:description:image:printerIp:">&ndash;&nbsp;payWithPayleven:amount:currency:orderId:description:image:printerIp:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initate a payment with the payleven app.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)payWithPayleven:(NSObject&lt;PaylevenPaymentDelegate&gt; *)<em>delegate</em> amount:(NSUInteger)<em>amount</em> currency:(PaylevenCurrency)<em>currency</em> orderId:(NSString *)<em>orderId</em> description:(NSString *)<em>description</em> image:(UIImage *)<em>image</em> printerIp:(NSString *)<em>printerIp</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>delegate</code></th>
+						<td><p>Delegate that implements the <a href="../Protocols/PaylevenPaymentDelegate.html">PaylevenPaymentDelegate</a> protocol.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>amount</code></th>
+						<td><p>The amount of the payment in cents so that it should be be multiplied by 100 (1.25 becomes 125). This value has to be larger than 0.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>currency</code></th>
+						<td><p>The <a href="../Constants/PaylevenCurrency.html"><code>PaylevenCurrency</code></a> to use has to be the currency of the current country.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>orderId</code></th>
+						<td><p>Id of this order has to be unique over all payments for the payleven merchant else the payment will fail.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>description</code></th>
+						<td><p>Optional description string for the payment.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>image</code></th>
+						<td><p>Optional image for the product that will be shown on the receipt the image will be rescaled to 197x197 so you should give a squared image.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>printerIp</code></th>
+						<td><p>Optional ip for an epson printer</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NO on error</p><p>YES on success</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Constants/PaylevenCurrency.html">PaylevenCurrency</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/openTransactionHistory:" title="openTransactionHistory:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openTransactionHistory:">&ndash;&nbsp;openTransactionHistory:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Open transaction history with the payleven app.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)openTransactionHistory:(NSObject&lt;PaylevenPaymentDelegate&gt; *)<em>delegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>delegate</code></th>
+						<td><p>Delegate that implements the <a href="../Protocols/PaylevenPaymentDelegate.html"><code>PaylevenPaymentDelegate</code></a> protocol.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NO on error</p><p>YES on success</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/openTransactionDetails:orderId:" title="openTransactionDetails:orderId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openTransactionDetails:orderId:">&ndash;&nbsp;openTransactionDetails:orderId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Open transaction detail with the payleven app but disable doing refunds.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)openTransactionDetails:(NSObject&lt;PaylevenPaymentDelegate&gt; *)<em>delegate</em> orderId:(NSString *)<em>orderId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>delegate</code></th>
+						<td><p>Delegate that implements the <a href="../Protocols/PaylevenPaymentDelegate.html">PaylevenPaymentDelegate</a> protocol.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>orderId</code></th>
+						<td><p>Id of this order has to be unique over all payments for the payleven merchant else the payment will fail.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NO on error</p><p>YES on success</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/openTransactionDetailsForRefund:orderId:" title="openTransactionDetailsForRefund:orderId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openTransactionDetailsForRefund:orderId:">&ndash;&nbsp;openTransactionDetailsForRefund:orderId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Open transaction detail with the payleven app but only enable refunds.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)openTransactionDetailsForRefund:(NSObject&lt;PaylevenPaymentDelegate&gt; *)<em>delegate</em> orderId:(NSString *)<em>orderId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>delegate</code></th>
+						<td><p>Delegate that implements the <a href="../Protocols/PaylevenPaymentDelegate.html">PaylevenPaymentDelegate</a> protocol.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>orderId</code></th>
+						<td><p>Id of this order has to be unique over all payments for the payleven merchant else the payment will fail.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NO on error</p><p>YES on success</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/reset" title="reset"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reset">&ndash;&nbsp;reset</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Reset a payment that wasn&rsquo;t finished properly. This might happen if the payleven app is closed while the payment wasn&rsquo;t finished.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)reset</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> if there is an ongoing payment in the payleven app this will not be canceled but you will not receive a callback through the <a href="../Protocols/PaylevenPaymentDelegate.html">PaylevenPaymentDelegate</a></p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isPaymentPending" title="isPaymentPending"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isPaymentPending">&ndash;&nbsp;isPaymentPending</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>check if there is an pending payment intiated from your app</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isPaymentPending</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if there is an pending payment</p><p>NO if there is an pending payment</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isPaylevenAvailable" title="isPaylevenAvailable"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isPaylevenAvailable">&ndash;&nbsp;isPaylevenAvailable</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>check if the payleven scheme is registered</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isPaylevenAvailable</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if payleven scheme is registered</p><p>NO if payleven scheme is not registered</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isConfigured" title="isConfigured"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isConfigured">&nbsp;&nbsp;isConfigured</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Flag to check if the API is successfully configured.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly) BOOL isConfigured</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PaylevenAppApi.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 Payleven Holding GmbH. All rights reserved. Updated: 2015-02-12</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>PaylevenAppApi 1.2 Reference</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="index.html">PaylevenAppApi 1.2 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="index.html">Payleven Holding GmbH</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="hierarchy.html">Hierarchy</a></li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview-contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">PaylevenAppApi 1.2 Reference</h1>
+
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<p>The PaylevenAppApi allows app developers to open the payleven app from within their own apps and to do payments with it.</p>
+
+<p>To be able to use the API you need an API key which you can request at <a href="http://developer.payleven.com.">http://developer.payleven.com.</a></p>
+
+<p><strong>Usage:</strong></p>
+
+<hr />
+
+<p><strong><em>1.)</em></strong> Just add the <em><a href="Classes/PaylevenAppApi.html">PaylevenAppApi</a>.framework</em> to your project and import the header.</p>
+
+<pre><code>#import &lt;PaylevenAppApi/PaylevenAppApi.h&gt;
+</code></pre>
+
+<hr />
+
+<p><strong><em>2.)</em></strong> Before doing payments you need to configure the API. In the following example replace <em>yourapikey</em> and <em>yoururlscheme</em>.</p>
+
+<p> <strong>Example API configuration:</strong></p>
+
+<pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [[PaylevenAppApi sharedInstance] configure:@"yourapikey" callbackUrlScheme:@"yoururlscheme"];
+    return YES;
+}
+</code></pre>
+
+<hr />
+
+<p><strong><em>3.)</em></strong> After a payment is finished in payleven it will open your app and notify it if the payment was successful, canceled or failed.</p>
+
+<p>  <strong>As parameter you get a dictionary with the following payment content.</strong></p>
+
+<table>
+<thead>
+<tr>
+<th> payment information key </th>
+<th align="center"> explanation </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> result </td>
+<td align="center"> success, cancled, rejected, refunded </td>
+</tr>
+<tr>
+<td> description </td>
+<td align="center">  product description </td>
+</tr>
+<tr>
+<td> orderId </td>
+<td align="center">  send order id for a transaction </td>
+</tr>
+<tr>
+<td> errorCode </td>
+<td align="center">  please find error codes in <a href="Constants/PaylevenAppApiErrorCode.html">PaylevenAppApiErrorCode</a> </td>
+</tr>
+<tr>
+<td> amount </td>
+<td align="center">  transaction amount </td>
+</tr>
+<tr>
+<td> tipAmount </td>
+<td align="center">  tip amount in case of tip </td>
+</tr>
+<tr>
+<td> currency </td>
+<td align="center">  EUR, PLN, PUND </td>
+</tr>
+<tr>
+<td> is_duplicate_receipt </td>
+<td align="center">  not yet implemented </td>
+</tr>
+<tr>
+<td> payment_method </td>
+<td align="center">  CHIPPIN, CHIPSIGN, CASH, S&amp;S </td>
+</tr>
+<tr>
+<td> expire_month </td>
+<td align="center">  card expiry month </td>
+</tr>
+<tr>
+<td> expire_year </td>
+<td align="center">  card expiry year </td>
+</tr>
+<tr>
+<td> effective_month </td>
+<td align="center">  card effective month </td>
+</tr>
+<tr>
+<td> effective_year </td>
+<td align="center">  card effective year </td>
+</tr>
+<tr>
+<td> aid </td>
+<td align="center">  application identifier </td>
+</tr>
+<tr>
+<td> application_label </td>
+<td align="center">  e.g. V Pay, Maestro </td>
+</tr>
+<tr>
+<td> application_preferred_name </td>
+<td align="center">  e.g. VISA DEBIT  </td>
+</tr>
+<tr>
+<td> pan </td>
+<td align="center"> masked card PAN </td>
+</tr>
+<tr>
+<td> issuer_identification_number </td>
+<td align="center">  IIN number.  </td>
+</tr>
+<tr>
+<td> pan_seq </td>
+<td align="center">  card pan sequence number. E.g. if you loose a card and you get a second one the pan_seq will be 2 </td>
+</tr>
+<tr>
+<td> card_scheme </td>
+<td align="center">  VISA, MASTERCARD, AMERICAN EXPRESS, HSBC….. </td>
+</tr>
+<tr>
+<td> bank_code </td>
+<td align="center">  BLZ </td>
+</tr>
+<tr>
+<td> pos_entry_mode </td>
+<td align="center">  manual, swiped or ICC (chip&amp;pin) </td>
+</tr>
+<tr>
+<td> merchant_id </td>
+<td align="center">  payleven merchant id </td>
+</tr>
+<tr>
+<td> merchant_display_name </td>
+<td align="center">  payleven display name </td>
+</tr>
+<tr>
+<td> auth_code </td>
+<td align="center">  authorisation code from acquirer </td>
+</tr>
+<tr>
+<td> terminal_id </td>
+<td align="center">  in case of chip&amp;pin serial number </td>
+</tr>
+<tr>
+<td> api_version </td>
+<td align="center">  API version </td>
+</tr>
+<tr>
+<td> timestamp </td>
+<td align="center"> time stamp of the transaction </td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong><em>3.1.)</em></strong> Therefore your application needs to have a custom url scheme registered that payleven can use to open and notify your app on finished payments. For more information about implementing a custom url scheme for your app see
+the <em>Implementing Custom URL Schemes</em> section in the <a href="http://developer.apple.com/library/ios/#documentation/iphone/conceptual/iphoneosprogrammingguide/AdvancedAppTricks/AdvancedAppTricks.html">Apple Documentation</a></p>
+
+<p><strong><em>3.2.)</em></strong> You also need to implement the <em>openUrl</em> method in your AppDelegate this will be called when your app was opened with the url scheme. In the openUrl method the url has to be passed to the <a href="Classes/PaylevenAppApi.html">PaylevenAppApi</a> <em>handleOpenUrl</em> method which will then notify the <a href="Protocols/PaylevenPaymentDelegate.html">PaylevenPaymentDelegate</a>.</p>
+
+<p> <strong>Example openUrl implementation:</strong></p>
+
+<pre><code>- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url 
+sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    [[PaylevenAppApi sharedInstance] handleOpenUrl:url bundleId:sourceApplication];
+    return YES;
+} 
+</code></pre>
+
+<hr />
+
+<p><strong><em>4.)</em></strong> To initiate a payment you have to call the payWithPayleven: method.</p>
+
+<p>Below you see an example payment call to open the payleven app with an amount of 1€, your custom order ID “unique_id_101”, a dummy description and no product picture.</p>
+
+<p> <strong>Example payment:</strong></p>
+
+<pre><code>[[PaylevenAppApi sharedInstance] payWithPayleven:self 
+                                                amount:100 
+                                                currency:PC_EUR 
+                                                orderId:@"unique_id_101"
+                                                description:@"dummy description" 
+                                                image:nil];
+</code></pre>
+
+<hr />
+
+<p><strong><em>5.)</em></strong> To view transaction history you have to call the openTransactionHistory: method.
+Below you see an example transaction history call to open the payleven App at the transaction history view.</p>
+
+<p> <strong>Example payment:</strong></p>
+
+<pre><code>[[PaylevenAppApi sharedInstance] openTransactionHistory:self];
+</code></pre>
+
+<hr />
+
+<p><strong><em>6.)</em></strong> To initiate a refund you have to call the openTransactionDetailsForRefund:orderId: method.
+Below you see an example call to open the payleven App at the transaction details view to initiate a refund.</p>
+
+<p> <strong>Example payment:</strong></p>
+
+<pre><code>[[PaylevenAppApi sharedInstance] openTransactionDetailsForRefund:self orderId:@"unique_id_101"];
+</code></pre>
+
+<p><strong><em>6.1)</em></strong> If transaction was not found in payleven it will open your app and notify it.</p>
+
+<p><strong><em>6.2)</em></strong> After a refund is finished in payleven it will open your app and notify it if the refund was successful, canceled or failed.</p>
+
+<hr />
+
+<p><strong><em>7.)</em></strong> To open the transaction details page for other actions than refunds you have to call the openTransactionDetails:orderId: method.</p>
+
+<p><strong><em>7.1)</em></strong> If transaction was not found in payleven it will open your app and notify it.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em></p>
+
+<p>The amount should be multiplied by 100 so in this example this is a payment of 1.00 €.</p>
+
+<p>The order_id has to be unique for each merchant. Otherwise the method will return an error.</p></div>
+						
+						
+					</div>
+					
+
+					<div class="index-container">
+						
+
+						
+						<div class="index-column">
+							<h2 class="index-title">Class References</h2>
+							<ul>
+								
+								<li><a href="Classes/PaylevenAppApi.html">PaylevenAppApi</a></li>
+								
+							</ul>
+						</div>
+						
+
+						
+						<div class="index-column">
+							
+							<h2 class="index-title">Protocol References</h2>
+							<ul>
+								
+								<li><a href="Protocols/PaylevenPaymentDelegate.html">PaylevenPaymentDelegate</a></li>
+								
+							</ul>
+							
+
+							
+							<h2 class="index-title">Constant References</h2>
+							<ul>
+								
+									<li><a href="Constants/PaylevenAppApiErrorCode.html">PaylevenAppApiErrorCode</a></li>
+								
+									<li><a href="Constants/PaylevenCurrency.html">PaylevenCurrency</a></li>
+								
+							</ul>
+							
+
+							
+						</div>
+						
+					</div>
+
+					<footer>
+						<div class="footer-copyright">
+							
+							<p class="copyright">Copyright &copy; 2015 Payleven Holding GmbH. All rights reserved. Updated: 2015-02-12</p>
+							
+							
+							<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+							
+						</div>
+					</footer>
+				</main>
+			</div>
+		</div>
+	</article>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
