@@ -72,4 +72,4 @@ To view transaction history you have to call the openTransactionHistory: method.
 
    
 #### Documentation
-[API Reference](http://payleven.github.io/mPOS-SDK-iOS/AppleDoc/)
+[API Reference](http://payleven.github.io/Mobile-API-iOS-Internal/AppleDoc/)
