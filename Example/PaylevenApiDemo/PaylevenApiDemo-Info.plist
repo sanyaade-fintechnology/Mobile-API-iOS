@@ -40,6 +40,10 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.2</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>payleven</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>

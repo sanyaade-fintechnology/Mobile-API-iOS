@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		75B985121982C26500B7A030 /* PaylevenAppApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B985111982C26500B7A030 /* PaylevenAppApi.framework */; };
-		F32CD6711B20560F0044CB89 /* rafael-otero.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F32CD6701B20560F0044CB89 /* rafael-otero.jpg */; };
+		F3E2EC9C1CBBE02200CAE3A3 /* product_apple.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E2EC9B1CBBE02200CAE3A3 /* product_apple.png */; };
 		F993D66D1743D38C00800A48 /* App-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F993D66B1743D38A00800A48 /* App-Icon.png */; };
 		F993D66E1743D38C00800A48 /* App-Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F993D66C1743D38B00800A48 /* App-Icon@2x.png */; };
 		F9E737F0162317A60094F237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E737EF162317A60094F237 /* UIKit.framework */; };
@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		75B985111982C26500B7A030 /* PaylevenAppApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PaylevenAppApi.framework; path = PaylevenApiDemo/PaylevenAppApi.framework; sourceTree = "<group>"; };
-		F32CD6701B20560F0044CB89 /* rafael-otero.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rafael-otero.jpg"; sourceTree = "<group>"; };
+		F3E2EC9B1CBBE02200CAE3A3 /* product_apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_apple.png; sourceTree = "<group>"; };
 		F993D66B1743D38A00800A48 /* App-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon.png"; sourceTree = "<group>"; };
 		F993D66C1743D38B00800A48 /* App-Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon@2x.png"; sourceTree = "<group>"; };
 		F9E737EB162317A60094F237 /* PaylevenApiDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaylevenApiDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,9 +93,9 @@
 		F9E737F5162317A60094F237 /* PaylevenApiDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F9E73807162317A60094F237 /* MainStoryboard_iPhone.storyboard */,
 				F9E737FE162317A60094F237 /* PADAppDelegate.h */,
 				F9E737FF162317A60094F237 /* PADAppDelegate.m */,
-				F9E73807162317A60094F237 /* MainStoryboard_iPhone.storyboard */,
 				F9E7380D162317A60094F237 /* PADViewController.h */,
 				F9E7380E162317A60094F237 /* PADViewController.m */,
 				F9E737F6162317A60094F237 /* Supporting Files */,
@@ -106,7 +106,7 @@
 		F9E737F6162317A60094F237 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F32CD6701B20560F0044CB89 /* rafael-otero.jpg */,
+				F3E2EC9B1CBBE02200CAE3A3 /* product_apple.png */,
 				F993D66B1743D38A00800A48 /* App-Icon.png */,
 				F993D66C1743D38B00800A48 /* App-Icon@2x.png */,
 				F9E737F7162317A60094F237 /* PaylevenApiDemo-Info.plist */,
@@ -172,12 +172,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F32CD6711B20560F0044CB89 /* rafael-otero.jpg in Resources */,
 				F9E737FA162317A60094F237 /* InfoPlist.strings in Resources */,
 				F9E73802162317A60094F237 /* Default.png in Resources */,
 				F9E73804162317A60094F237 /* Default@2x.png in Resources */,
 				F9E73806162317A60094F237 /* Default-568h@2x.png in Resources */,
 				F9E73809162317A60094F237 /* MainStoryboard_iPhone.storyboard in Resources */,
+				F3E2EC9C1CBBE02200CAE3A3 /* product_apple.png in Resources */,
 				F993D66D1743D38C00800A48 /* App-Icon.png in Resources */,
 				F993D66E1743D38C00800A48 /* App-Icon@2x.png in Resources */,
 			);
@@ -275,6 +275,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PaylevenApiDemo\"",
@@ -305,6 +306,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PaylevenApiDemo\"",

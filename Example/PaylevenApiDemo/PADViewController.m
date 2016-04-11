@@ -100,11 +100,11 @@
     
     BOOL paymentStarted = [[PaylevenAppApi sharedInstance] payWithPayleven:self
                                                                     amount:iAmount
-                                                                  currency:PC_EUR // change currency here, if your payleven account is not a EUR account
+                                                                  currency:PC_EUR
                                                                    orderId:orderIdText
                                                                description:description
                                                                      image:self.productImage
-                                                                 printerIp:@""]; // change it to something like @"192.168.1.3", if you have a Epson TM-T88V connected at that address
+                                                                 printerIp:@""];
     
     if ( !paymentStarted )
     {
@@ -143,7 +143,7 @@
     if([sender.titleLabel.text isEqualToString:@"Add Img"]){
         [sender setTitle:@"Rmv Img" forState:UIControlStateNormal];
         
-        self.productImage = [UIImage imageNamed:@"rafael-otero.jpg"];
+        self.productImage = [UIImage imageNamed:@"product_apple.png"];
         self.paymentImageView.image = self.productImage;
     }else{
         self.productImage = nil;
