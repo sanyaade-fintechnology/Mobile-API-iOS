@@ -7,7 +7,19 @@
 XXX DESCRIPTION XXX [websites](https://payleven.com/).
 
 ### Prerequisites
-XXXX TO BE EDITED
+Step 1 - Create a merchant account
+To process a transaction you need to login in the payleven app with our payleven account. You can create an account by registering on our [webiste](https://payleven.co.uk/registration/?login=). Make sure to register for the country you wish.
+
+Step 2 - Create a developer account
+To grant your application access to payleven’s API you need to [register](https://service.payleven.com/uk/developer/) and receive an API key. Please keep in mind that you should use your final app specifications (e.g bundle-ID for iOS or package name for Android) during the registration since these will be used in combination with your API key to identify of your app.
+
+Step 3 - Install the payleven app
+Althought the payment is initiated in your app; the actual transaction takes place within the payleven app. For this reason, the payleven app must be installed on the mobile device you wish to use for accepting card payments.
+
+Step 4 - Purchase card reader
+To accept card payments, you need to purchase a card reader. This is possible on our [website](https://payleven.co.uk/registration/?login=) during the registration or in your [payleven account](https://service.payleven.com/uk/ordermain) after registration. 
+For testing purposes a card reader is not necessarily needed as the transaction flow . You can test rth payment methods are available that don’t require any hardware, e.g. cash. With this payment method you can go through the transaction flow similar to a card payment process.
+
 1. Register with [payleven](http://payleven.com) in order to get personal merchant credentials and a card reader.
 2. In order to receive an API key, please contact us by sending an email to developer@payleven.com.
 XXXX EDITING ENDS
