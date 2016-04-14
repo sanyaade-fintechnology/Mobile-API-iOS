@@ -3,9 +3,20 @@
 [![CocoaPods](https://img.shields.io/badge/Platform-iOS-yellow.svg?style=flat-square)]()
 [![CocoaPods](https://img.shields.io/badge/Requires-iOS%207+-blue.svg?style=flat-square)]()
 [![CocoaPods](https://img.shields.io/badge/Made%20in-Berlin-red.svg?style=flat-square)]()
-In-progress
-This project is about the PaylevenAppApi for iOS that allows app developers to process payments through the payleven application. Althouhh the payment will be initiated by your application, by opening the payleven app from within your own application, and process payments through it. 
 
+The PaylevenAppApi makes possible for app developers to open the payleven application from within their own apps and process payments. Although the payment is initiated on your app, it is the payleven application that takes care of handling the payment process. After a payment is processed, it will open your app and notify if the payment was successful, canceled or failed. 
+
+#### Main Features
+- Connects to payleven EMV/PCI certified card reader via bluetooth
+- Accept all major card schemes such as Visa, Mastercard or American Express
+- Provide immediate information about the payment status 
+- Refund card payments
+- Support cash payment method
+- Supports all main languages
+
+#### Limitations
+- Available only on the markets where [payleven](https://payleven.com/) operates
+- Limited control on the UI 
 
 #### Prerequisites
 ######Step 1 - Create a merchant account
