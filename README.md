@@ -1,4 +1,4 @@
-# payleven Mobile API for iOS 1.2
+# payleven Mobile API for iOS 
 
 [![CocoaPods](https://img.shields.io/badge/Platform-iOS-yellow.svg?style=flat-square)]()
 [![CocoaPods](https://img.shields.io/badge/Requires-iOS%207+-blue.svg?style=flat-square)]()
@@ -48,19 +48,25 @@ For testing purposes a card reader is not necessarily needed as the transaction 
         #import <PaylevenAppApi/PaylevenAppApi.h>
 
 
-#### Getting started    
+#### Getting started 
+
+##### Bluetooth pairing
+Before proceeding with the integration and testing, make sure you have paired the card reader in the bluetooth settings on your iOS device.
+ 1. Make sure the device is charged and turned on.
+ 2. Press '0' key on the card reader for 5 sec and make sure the card reader has entered the pairing mode (there will be a corresponding sign on the screen).
+ 3. Go to the bluetooth settings of your iOS device and turn on bluetooth.
+ 4. Inside the payleven app select the "discovered" payleven card reader and follow the instructions on both devices to finish the pairing process.
+   
 ##### Setup your app
 Use API key received from payleven together with your callback URL scheme to setup your app. 
 Before doing payments you need to configure the API. In the following example replace yourapikey and yoururlscheme.
  ```c
-
 [[PaylevenAppApi sharedInstance] configure:@"yourapikey" callbackUrlScheme:@"yoururlscheme"];
 
  ```
 
 In your app's App Delegate make sure you implement its openURL method to make sure your receive payleven's responses properly
  ```c
-
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url 
 sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
@@ -68,10 +74,9 @@ sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
     return YES;
 } 
  ```
-  
 
 ##### Start payment
-Below you see an example payment call to open the payleven app with an amount of 1€, your custom order ID “unique_id_101”, a dummy description and no product picture.
+Below you see an example payment call to open the payleven app with an amount of 1€, your custom order ID “unique_id_101”, a dummy description and no product picture. The payleven app is going to launch with the payment input screen setup with the values you provided. To ensure a stable flow these values cannot be changed in the payleven app anymore, however you cancel the payment and you will jump back to your app.
 
  ```c
 [[PaylevenAppApi sharedInstance] payWithPayleven:self 
@@ -89,6 +94,14 @@ To view transaction history you have to call the openTransactionHistory: method.
 [[PaylevenAppApi sharedInstance] openTransactionHistory:self];
 
  ```
+
+##### Open Transaction Details (Refund)
+To initiate a refund you have to call the openTransactionDetailsForRefund:orderId: method. Below you see an example call to open the payleven App at the transaction details view to initiate a refund.
+ ```c
+[[PaylevenAppApi sharedInstance] openTransactionDetailsForRefund:self orderId:@"unique_id_101"];
+
+ ```
+
 
    
 #### Documentation
