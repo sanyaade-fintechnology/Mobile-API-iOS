@@ -1,4 +1,4 @@
-# payleven Mobile API for iOS 
+# payleven Point Pay API for iOS 
 
 [![CocoaPods](https://img.shields.io/badge/Platform-iOS-yellow.svg?style=flat-square)]()
 [![CocoaPods](https://img.shields.io/badge/Requires-iOS%207+-blue.svg?style=flat-square)]()
