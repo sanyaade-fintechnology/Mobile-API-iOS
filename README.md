@@ -1,8 +1,8 @@
-# payleven Point Pay API for iOS 
-
 [![CocoaPods](https://img.shields.io/badge/Platform-iOS-yellow.svg?style=flat-square)]()
 [![CocoaPods](https://img.shields.io/badge/Requires-iOS%207+-blue.svg?style=flat-square)]()
 [![CocoaPods](https://img.shields.io/badge/Made%20in-Berlin-red.svg?style=flat-square)]()
+
+# payleven Point Pay API
 
 The PaylevenAppApi makes possible for app developers to open the payleven application from within their own apps and process payments. Although the payment is initiated on your app, it is the payleven application that takes care of handling the payment process. After a payment is processed, it will open your app and notify if the payment was successful, canceled or failed. 
 
@@ -17,7 +17,7 @@ The PaylevenAppApi makes possible for app developers to open the payleven applic
 ### Prerequisites
 * You or your client is operating in one of the countries supported by payleven.
 * You are registered as a regular payleven user in a [payleven country](https://payleven.com/).
-* You are registered as an integrator on the [developer page](https://service.payleven.com/uk/developer) for an unique API key.
+* You have signed up and received your API key [here](https://service.payleven.com/uk/developer?product=apppay).
 * The iOS or Android payleven app is installed on the mobile device you want to use for accepting card payments.
 * A payleven Classic (Chip & PIN) or Plus (NFC) terminal.
 * Internet connection and geo location is available in your general use-case
