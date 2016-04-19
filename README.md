@@ -6,7 +6,7 @@
 
 The PaylevenAppApi makes possible for app developers to open the payleven application from within their own apps and process payments. Although the payment is initiated on your app, it is the payleven application that takes care of handling the payment process. After a payment is processed, it will open your app and notify if the payment was successful, canceled or failed. 
 
-#### Main Features
+### Main Features
 - Connects to payleven EMV/PCI certified card reader via bluetooth
 - Accept all major card schemes such as Visa, Mastercard or American Express
 - Provide immediate information about the payment status 
@@ -14,28 +14,22 @@ The PaylevenAppApi makes possible for app developers to open the payleven applic
 - Supports cash payment method
 - Supports all main languages
 
-#### Limitations
+### Limitations
 - Available only on the markets where [payleven](https://payleven.com/) operates
 - Limited control on the UI 
 
-#### Prerequisites
-######Step 1 - Create a merchant account
-To process a transaction you need to login in the payleven app with our payleven account. You can create an account by registering on our [website](https://payleven.co.uk/registration/?login=). Make sure to register for the country you wish.
-
-######Step 2 - Create a developer account
-To grant your application access to payleven’s API you need to [register](https://developer.payleven.com/) and receive an API key. Please keep in mind that you should use your final app specifications (e.g bundle-ID for iOS or package name for Android) during the registration since these will be used in combination with your API key to identify of your app.
-
-######Step 3 - Install the payleven app
-Althought the payment is initiated in your app; the actual transaction takes place within the payleven app. For this reason, the payleven app must be installed on the mobile device you wish to use for accepting card payments.
-
-######Step 4 - Purchase card reader
-To accept card payments, you need to purchase a card reader. This is possible on our [website](https://payleven.co.uk/registration/?login=) during the registration or in your [payleven account](https://service.payleven.com/uk/ordermain) after registration. 
-For testing purposes a card reader is not necessarily needed as the transaction flow can be tested using another payment methods: e.g. cash.
+### Prerequisites
+* You or your client is operating in one of the countries supported by payleven.
+* You are registered as a regular payleven user in a [payleven country](https://payleven.com/).
+* You are registered as an integrator on the [developer page](https://service.payleven.com/uk/developer) for an unique API key.
+* The iOS or Android payleven app is installed on the mobile device you want to use for accepting card payments.
+* A payleven Classic (Chip & PIN) or Plus (NFC) terminal.
+* Internet connection and geo location is available in your general use-case
 
 ### Installation
 
 
-##### Manual Set-Up
+#### Manual Set-Up
 
 1. Drag *PaylevenAppApi.framework* into your Xcode project.
 
@@ -48,16 +42,14 @@ For testing purposes a card reader is not necessarily needed as the transaction 
         #import <PaylevenAppApi/PaylevenAppApi.h>
 
 
-#### Getting started 
-
-##### Bluetooth pairing
+#### Bluetooth pairing
 Before proceeding with the integration and testing, make sure you have paired the card reader in the bluetooth settings on your iOS device.
  1. Make sure the device is charged and turned on.
  2. Press '0' key on the card reader for 5 sec and make sure the card reader has entered the pairing mode (there will be a corresponding sign on the screen).
  3. Go to the bluetooth settings of your iOS device and turn on bluetooth.
  4. Inside the payleven app select the "discovered" payleven card reader and follow the instructions on both devices to finish the pairing process.
    
-##### Setup your app
+#### Setup your app
 Use API key received from payleven together with your callback URL scheme to setup your app. 
 Before doing payments you need to configure the API. In the following example replace yourapikey and yoururlscheme.
  ```c
@@ -75,7 +67,7 @@ sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 } 
  ```
 
-##### Start payment
+#### Start payment
 Below you see an example payment call to open the payleven app with an amount of 1€, your custom order ID “unique_id_101”, a dummy description and no product picture. The payleven app is going to launch with the payment input screen setup with the values you provided. To ensure a stable flow these values cannot be changed in the payleven app anymore, however you cancel the payment and you will jump back to your app.
 
  ```c
@@ -87,7 +79,7 @@ Below you see an example payment call to open the payleven app with an amount of
                                                 image:nil];
  ```
   
-##### Open Transaction History 
+#### Open Transaction History 
 To view transaction history you have to call the openTransactionHistory: method. Below you see an example transaction history call to open the payleven App at the transaction history view.
 
  ```c
@@ -95,7 +87,7 @@ To view transaction history you have to call the openTransactionHistory: method.
 
  ```
 
-##### Open Transaction Details (Refund)
+#### Open Transaction Details (Refund)
 To initiate a refund you have to call the openTransactionDetailsForRefund:orderId: method. Below you see an example call to open the payleven App at the transaction details view to initiate a refund.
  ```c
 [[PaylevenAppApi sharedInstance] openTransactionDetailsForRefund:self orderId:@"unique_id_101"];
