@@ -4,7 +4,10 @@
 
 # payleven Point Pay API
 
-The PaylevenAppApi makes possible for app developers to open the payleven application from within their own apps and process payments. Although the payment is initiated on your app, it is the payleven application that takes care of handling the payment process. After a payment is processed, it will open your app and notify if the payment was successful, canceled or failed. 
+The PaylevenAppApi makes possible for app developers to open the payleven application from within their own apps and process payments. Although the payment is initiated on your app, it is the payleven application that takes care of handling the payment process. After a payment is processed, it will open your app and notify if the payment was successful, canceled or failed.
+
+> Note: 
+> The product has been renamed to payleven Point Pay API from Mobile API. Any references within the documentation or classes are relevant to payleven Point Pay API.
 
 ### Main Features
 - Connects to payleven EMV/PCI certified card reader via bluetooth
