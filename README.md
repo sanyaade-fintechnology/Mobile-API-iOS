@@ -1,3 +1,9 @@
+### NOTE: 
+### Payleven and SumUp are now one company. The payleven APIs are no longer supported. Please see [SumUp's iOS API](https://github.com/sumup/sumup-ios-url-scheme).
+
+---
+---
+
 [![CocoaPods](https://img.shields.io/badge/Platform-iOS-yellow.svg?style=flat-square)]()
 [![CocoaPods](https://img.shields.io/badge/Requires-iOS%207+-blue.svg?style=flat-square)]()
 [![CocoaPods](https://img.shields.io/badge/Made%20in-Berlin-red.svg?style=flat-square)]()
